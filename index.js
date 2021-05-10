@@ -15,7 +15,7 @@ orders.forEach(function(order) {
 } 
 );
 
-console.log("------------------------------------------------------------------------------");
+("------------------------------------------------------------------------------");
 
 // 2. Increment by 1
 
@@ -26,7 +26,7 @@ arrayOfNumbers.forEach(function(number) {
     console.log(number);
 });
 
-console.log("------------------------------------------------------------------------------");
+("------------------------------------------------------------------------------");
 
 
 // 3. Filter Evens
@@ -39,15 +39,36 @@ severalNumbers.forEach(function(number) {
 }
 });
 
-console.log("------------------------------------------------------------------------------");
+("------------------------------------------------------------------------------");
 
 // 4. Filter Friends 
 
 const friends = ["rika", "jenna", "bleda", "oliver", "itamar"];
 
-// friends.forEach(function(x) {
 
-// });
+function friendsIncludes(array, toFilter) {
+const result = array.filter(word => word.includes(toFilter));
+ { return result };    
+}
 
 
-// use .includes() ??
+console.log(friendsIncludes(friends, "e"));
+
+// 5. Sum Up
+ 
+const arrayToReduce = [5, 7, 3];
+
+function reduceArray(array) {
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+return array.reduce(reducer);
+}
+
+console.log(reduceArray(arrayToReduce));
+
+
+// 6. Square Root
+
+const numsToSquare = [7, 2, 10]
+
+const squared = numsToSquare.map(x => x * x);
+console.log(squared);
